@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome 5 CDN link to add icones -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Sign Up</title>
+    <!-- Linking .css file with HTML page -->
+    <link rel="stylesheet" href="/static/CSS/sign.css">
+</head>
+<body style="background-image: url('/static/images/hosgadde.jpg');">
+<div class="container" style="border-radius: 20px;background-color: rgba(40, 18, 126, 0.144);">
+    <!-- Left section of signup form -->
+    <div class="fab">
+        <h1>Sign Up</h1>
+        <h5>Welcome to - Namma Uttara Kannada</h5>
+        <form action="/signup" method="post">
+            {% csrf_token %}
+            <div>
+                <p><label for="userNmae">User Name</label></p>
+                <input type="text" id="userName" name="userName">
+            </div>
+            <div>
+                <p><label for="email">Email Address</label></p>
+                <input type="email" id="email" name="email">
+            </div>
+            <div>
+                <p><label for="password">Password</label></p>
+                <input type="password" id="password" name="password">
+            </div>
+            <button type="submit">Sign Up Now</button>
+        </form>
+        <p>Already a member? <a href="/signin">Log in</a></p>
+    </div>
+    <!-- Right section of the form containing image -->
+    <div class="section1; section2">
+        <img src="/static/images/My%20project-1.png">
+    </div>
+</div>
+</body>
+</html>

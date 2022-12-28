@@ -1,0 +1,123 @@
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(7, 80, 168, 0.493),rgba(223, 139, 28, 0.767)),url(/static/images/IMG_1775.png);
+     background-position: center;
+    background-size: cover;
+    position: relative;
+    animation: change 40s infinite ease-in-out;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 200px;
+    height: 300px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: initial;
+    top: 50px;
+}  
+.nav-links ul li a{
+    color: rgb(244, 245, 246);
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Roboto Slab', serif;
+    
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 4px;
+    background: rgb(210, 82, 13);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+   
+}
+/*-----gallery----*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.gal-header{
+    height: 100vh;
+    width: 100%;
+    background-image:url(photos/gangavali.jpg);
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    
+
+}
+.galleryrow h1{
+    color: rgb(202, 234, 22);
+    font-size: 80px;
+    font-family: 'Caveat', cursive;
+    position: relative;
+    top: -300px;
+    left: 440px;
+}
+.gallerycol{
+   
+    width: 80%;
+    padding: 5px;
+    top: -100px;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 30px;
+    box-sizing: border-box;
+}
+
+.gallerycol img{
+    width: 100%;
+    cursor: pointer;
+}
+.gallerycol img:hover{
+    transform: scale(0.8) rotate(-15deg);
+    border-radius: 20px;
+    box-shadow: 0 32px 75px grey ;
+}
+.fullimg{
+    width: 100%;
+    height: 100vh;
+    background: rgba(100, 148, 237, 0.808);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+}
+.fullimg img{
+    width: 90%;
+    max-width: 500px;
+
+
+
+}
+.fullimg span{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Booking Form HTML Template</title>
+
+    <link type="text/css" rel="stylesheet" href="/static/CSS/MainStyle.css"/>
+
+    <link type="text/css" rel="stylesheet" href="/static/CSS/styleBooking.css"/>
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <meta name="robots" content="noindex, follow">
+    <script nonce="b6b048cf-8ae3-4f46-9b89-08a7b3879af8">(function (w, d) {
+        !function (eK, eL, eM, eN) {
+            eK.zarazData = eK.zarazData || {};
+            eK.zarazData.executed = [];
+            eK.zaraz = {deferred: [], listeners: []};
+            eK.zaraz.q = [];
+            eK.zaraz._f = function (eO) {
+                return function () {
+                    var eP = Array.prototype.slice.call(arguments);
+                    eK.zaraz.q.push({m: eO, a: eP})
+                }
+            };
+            for (const eQ of ["track", "set", "debug"]) eK.zaraz[eQ] = eK.zaraz._f(eQ);
+            eK.zaraz.init = () => {
+                var eR = eL.getElementsByTagName(eN)[0], eS = eL.createElement(eN),
+                    eT = eL.getElementsByTagName("title")[0];
+                eT && (eK.zarazData.t = eL.getElementsByTagName("title")[0].text);
+                eK.zarazData.x = Math.random();
+                eK.zarazData.w = eK.screen.width;
+                eK.zarazData.h = eK.screen.height;
+                eK.zarazData.j = eK.innerHeight;
+                eK.zarazData.e = eK.innerWidth;
+                eK.zarazData.l = eK.location.href;
+                eK.zarazData.r = eL.referrer;
+                eK.zarazData.k = eK.screen.colorDepth;
+                eK.zarazData.n = eL.characterSet;
+                eK.zarazData.o = (new Date).getTimezoneOffset();
+                if (eK.dataLayer) for (const eX of Object.entries(Object.entries(dataLayer).reduce(((eY, eZ) => ({...eY[1], ...eZ[1]}))))) zaraz.set(eX[0], eX[1], {scope: "page"});
+                eK.zarazData.q = [];
+                for (; eK.zaraz.q.length;) {
+                    const e_ = eK.zaraz.q.shift();
+                    eK.zarazData.q.push(e_)
+                }
+                eS.defer = !0;
+                for (const fa of [localStorage, sessionStorage]) Object.keys(fa || {}).filter((fc => fc.startsWith("_zaraz_"))).forEach((fb => {
+                    try {
+                        eK.zarazData["z_" + fb.slice(7)] = JSON.parse(fa.getItem(fb))
+                    } catch {
+                        eK.zarazData["z_" + fb.slice(7)] = fa.getItem(fb)
+                    }
+                }));
+                eS.referrerPolicy = "origin";
+                eS.src = "/cdn-cgi/zaraz/s.js?z=" + btoa(encodeURIComponent(JSON.stringify(eK.zarazData)));
+                eR.parentNode.insertBefore(eS, eR)
+            };
+            ["complete", "interactive"].includes(eL.readyState) ? zaraz.init() : eK.addEventListener("DOMContentLoaded", zaraz.init)
+        }(w, d, 0, "script");
+    })(window, document);</script>
+</head>
+<body>
+<div id="booking" class="section">
+    <div class="section-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 col-md-push-5">
+                    <div class="booking-cta">
+                        <h1>Make your reservation</h1>
+                        <p>Uttara Kannada district is one of the largest districts of the state and has abundant natural
+                            resources.
+                            The district with its distinct geographical features comprises of dense forest, perennial
+                            rivers,
+                            abundant flora and fauna
+                            and a long coastline.
+                            The district has 12 taluks namely Karwar,
+                            Ankola, Kumata, Bhatkala, Honnavar,
+                            Siddapur, Shirsi, Yallapur,
+                            Mundagoda, Supa (Zoida),
+                            Haliyala, Dandeli
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-md-pull-7">
+                    <div class="booking-form">
+                        <form action="/book" method="post">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <span class="form-label">Your Destination</span>
+                                <input class="form-control" type="text" placeholder="Enter a destination or hotel name"
+                                       name="destname">
+                            </div>
+                            <div class="form-group">
+                                <span class="form-label">Your Mail Id</span>
+                                <input class="form-control" type="text" placeholder="Enter a destination or hotel name"
+                                       name="mail">
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <span class="form-label">Check In</span>
+                                        <input class="form-control" type="date" required, name="dateFrom">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <span class="form-label">Check out</span>
+                                        <input class="form-control" type="date" name="dateTo">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <span class="form-label">Rooms</span>
+                                        <select class="form-control" name="room">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select>
+                                        <span class="select-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <span class="form-label">Adults</span>
+                                        <select class="form-control" name="adults">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select>
+                                        <span class="select-arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <span class="form-label">Children</span>
+                                        <select class="form-control" name="child">
+                                            <option>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                        </select>
+                                        <span class="select-arrow"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-btn">
+                                <button class="submit-btn">Check availability</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-23581568-13');
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993"
+        integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
+        data-cf-beacon='{"rayId":"77ce92de6cfef2a2","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2022.11.3","si":100}'
+        crossorigin="anonymous"></script>
+</body>
+</html>

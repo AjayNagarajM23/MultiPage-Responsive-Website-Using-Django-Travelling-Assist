@@ -1,0 +1,767 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(7, 80, 168, 0.493),rgba(223, 139, 28, 0.767)),url('/static/images/IMG_1775.png');
+     background-position: center;
+    background-size: cover;
+    position: relative;
+    animation: change 40s infinite ease-in-out;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 200px;
+    height: 300px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: initial;
+    top: 50px;
+}  
+.nav-links ul li a{
+    color: rgb(244, 245, 246);
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Roboto Slab', serif;
+    
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 4px;
+    background: rgb(210, 82, 13);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+   
+}
+.textbox{
+    width: 90%;
+    color: rgb(245, 238, 27);
+    position: absolute;
+    font-family: 'Satisfy', cursive;
+    top: 200px;
+    left: 100px;
+    font-size: 25px;
+    
+
+}
+.utt{
+    color: blue;
+    position: relative;
+     font-family: 'Caveat', cursive;
+     top: 700px;
+}
+.expbutton{
+    display: inline-block;
+    text-decoration: none;
+    color: aliceblue;
+    border: 1px solid white;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    left: 420px;
+    top: 7px;
+
+}
+.expbutton:hover{
+    border: 1px solid rgb(211, 31, 11);
+    background: rgb(230, 33, 11);
+    transition: 1s;
+    transform: matrix3d(50px,50px);
+    text-transform: uppercase;
+
+}
+@keyframes change{
+    0%{
+        background-image: linear-gradient(rgba(101, 101, 183, 0.463),rgba(211, 159, 62, 0.705)) ,url('/static/images/satodi.jpg');
+    }
+    10%{
+        background-image:linear-gradient(rgba(45, 104, 206, 0.498),rgba(126, 127, 135, 0.566)) ,url('/static/images/gokarnaroad.JPG');
+    } 
+    20%{
+        background-image:linear-gradient(rgba(220, 116, 24, 0.678),rgba(39, 142, 186, 0.696)) ,url('/static/images/keni.jpg');
+    }
+     30%{
+        background-image:linear-gradient(rgba(255, 0, 0, 0.644),rgba(178, 35, 35, 0.571)) ,url('/static/images/IMG_0576.png');
+    }
+    40%{
+        background-image:linear-gradient(rgba(21, 156, 70, 0.587),rgba(113, 105, 105, 0.454)) ,url('/static/images/shirle.jpg');
+    }
+    50%{
+        background-image:linear-gradient(rgba(224, 56, 224, 0.644),rgba(155, 131, 12, 0.612)) ,url('/static/images/keniboat.jpg');
+    }
+    60%{
+        background-image:linear-gradient(rgba(33, 172, 210, 0.596),rgba(41, 186, 25, 0.571)) ,url('/static/images/kogre.jpg');
+    }
+    70%{
+        background-image:linear-gradient(rgba(255, 102, 0, 0.594),rgba(40, 178, 35, 0.671)) ,url('/static/images/IMG_1871.JPG');
+    }
+}
+
+
+/*-------DESTINATIONS-----*/
+.destination{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+h2{
+    font-size: 90px;
+    font-weight: 700;
+    font-family: 'Caveat', cursive;
+    position: relative;
+    color: rgba(216, 27, 203, 0.728);
+}
+.row1 img{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    right: 500px;
+    top: 90px;
+    border: solid 20px rebeccapurple;
+    background: red;
+}
+.row1 h2{
+    color: blueviolet;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    top: -200px;
+    left: 80px;
+    
+}
+.row1 p{
+    width: 90%;
+    color: rgb(6, 6, 5);
+    position: relative;
+    font-family: 'Satisfy', cursive;
+    top: -200px;
+    left: 180px;
+    font-size: 25px;
+    
+    background: beige;
+    border-radius: 10px;
+    margin-bottom: 5% ;
+    padding: 20px 12px;
+    box-sizing: border-box;
+
+
+
+}
+.layer{
+    background: rgba(238, 130, 238, 0.489);
+    width: 100%;
+    height: 100%;
+}
+.row2 img{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    right: 500px;
+    top: -180px;
+    border: solid 20px rebeccapurple;
+}
+.row2 h2{
+    color: blueviolet;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    top: -450px;
+    left: 80px;
+    
+}
+.row2 p{
+    width: 90%;
+    color: rgb(6, 6, 5);
+    position: relative;
+    font-family: 'Satisfy', cursive;
+    top: -450px;
+    left: 180px;
+    font-size: 25px;
+    
+    background: beige;
+    border-radius: 10px;
+    margin-bottom: 5% ;
+    padding: 20px 12px;
+    box-sizing: border-box;
+
+
+
+}
+.row3 img{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    right: 500px;
+    top: -400px;
+    border: solid 20px rebeccapurple;
+}
+.row3 h2{
+    color: blueviolet;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    top: -680px;
+    left: 80px;
+    
+}
+.row3 p{
+    width: 90%;
+    color: rgb(6, 6, 5);
+    position: relative;
+    font-family: 'Satisfy', cursive;
+    top: -660px;
+    left: 180px;
+    font-size: 25px;
+    
+    background: beige;
+    border-radius: 10px;
+    margin-bottom: 5% ;
+    padding: 20px 12px;
+    box-sizing: border-box;
+
+
+
+}
+.row4 img{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    right: 500px;
+    top: -600px;
+    border: solid 20px rebeccapurple;
+}
+.row4 h2{
+    color: blueviolet;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    top: -920px;
+    left: 80px;
+    
+}
+.row4 p{
+    width: 90%;
+    color: rgb(6, 6, 5);
+    position: relative;
+    font-family: 'Satisfy', cursive;
+    top: -900px;
+    left: 180px;
+    font-size: 25px;
+    
+    background: beige;
+    border-radius: 10px;
+    margin-bottom: 5% ;
+    padding: 20px 12px;
+    box-sizing: border-box;
+
+
+
+}
+
+
+.opmd{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    position: relative;
+    left: -130px;
+}
+h1{
+    color: rgb(220, 22, 213);
+    font-family: 'Caveat', cursive;
+    font-size: 90px;
+    position: relative;
+    top: -900px;
+    left: 160px;
+}
+/*----MANYCOLOURS----*/
+.column{
+    width: 300px;
+    height: 500px;
+    flex-basis: 10%;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow:hidden;
+    top: -870px;
+    left: 20px;
+
+}
+.column img{
+    width: 100%;
+    height: 100%;
+}
+.layer{
+    background:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+h3{
+    color: aliceblue;
+    font-size: 30px;
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    position: relative;
+    top: 240px;
+    
+}
+.layer:hover{
+    background: rgba(55, 214, 55, 0.573);
+
+}
+.column img{
+    width: 100%;
+    height: 100%;
+}
+.layer{
+    background:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+h3{
+    color: aliceblue;
+    font-size: 30px;
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    position: relative;
+    top: 240px;
+    
+}
+.layer:hover{
+    background: rgba(55, 214, 55, 0.573);
+
+}
+
+
+.column1{
+    width: 300px;
+    height: 500px;
+    flex-basis: 10%;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow:hidden;
+    top: -500px;
+    left: 70px;
+
+}
+.column1 img{
+    width: 100%;
+    height: 100%;
+}
+.layer1{
+    background:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+h3{
+    color: aliceblue;
+    font-size: 30px;
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    position: relative;
+    top: 240px;
+    
+}
+.layer1:hover{
+    background: rgba(55, 214, 55, 0.573);
+
+}
+.column1 img{
+    width: 100%;
+    height: 100%;
+}
+.layer1{
+    background:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+h3{
+    color: aliceblue;
+    font-size: 30px;
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    position: relative;
+    top: 240px;
+    
+}
+.layer1:hover{
+    background: rgba(55, 214, 55, 0.573);
+
+}
+
+.column2{
+    width: 300px;
+    height: 500px;
+    flex-basis: 10%;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow:hidden;
+    top: -1398px;
+    left: 950px;
+
+}
+.column2 img{
+    width: 100%;
+    height: 100%;
+}
+.layer2{
+    background:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+h3{
+    color: aliceblue;
+    font-size: 30px;
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    position: relative;
+    top: 240px;
+    
+}
+.layer2:hover{
+    background: rgba(55, 214, 55, 0.573);
+
+}
+.column2 img{
+    width: 100%;
+    height: 100%;
+}
+.layer2{
+    background:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+h3{
+    color: aliceblue;
+    font-size: 30px;
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    position: relative;
+    top: 240px;
+    
+}
+.layer2:hover{
+    background: rgba(129, 142, 129, 0.621);
+
+}
+
+.column3{
+    width: 300px;
+    height: 500px;
+    flex-basis: 10%;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow:hidden;
+    bottom: 1929px;
+    left: 640px;
+
+}
+.column3 img{
+    width: 100%;
+    height: 100%;
+}
+.layer3{
+    background:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+h3{
+    color: aliceblue;
+    font-size: 30px;
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    position: relative;
+    top: 240px;
+    
+}
+.layer3:hover{
+    background: rgba(55, 214, 55, 0.573);
+
+}
+.column3 img{
+    width: 100%;
+    height: 100%;
+}
+.layer3{
+    background:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+h3{
+    color: aliceblue;
+    font-size: 30px;
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    position: relative;
+    top: 240px;
+    
+}
+.layer3:hover{
+    background: rgba(21, 169, 206, 0.573);
+
+}
+
+.column4{
+    width: 300px;
+    height: 500px;
+    flex-basis: 10%;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow:hidden;
+    bottom: 2458px;
+    left: 330px;
+
+}
+.column4 img{
+    width: 100%;
+    height: 100%;
+}
+.layer4{
+    background:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+h3{
+    color: aliceblue;
+    font-size: 30px;
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    position: relative;
+    top: 240px;
+    
+}
+.layer4:hover{
+    background: rgba(55, 214, 55, 0.573);
+
+}
+.column4 img{
+    width: 100%;
+    height: 100%;
+}
+.layer4{
+    background:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+h3{
+    color: aliceblue;
+    font-size: 30px;
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    position: relative;
+    top: 240px;
+    
+}
+.layer4:hover{
+    background: rgba(221, 102, 38, 0.621);
+
+}
+
+/*-------banner------*/
+.banner img{
+    height: 900px;
+    position: relative;
+    top: -2400px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.ban h2{
+    position: relative;
+    font-size: 90px;
+    top: -3150px;
+    left: 100px;
+    font-family: 'Caveat', cursive;
+    color: aliceblue;
+
+
+
+}
+.tripbutton img{
+    width: 300px;
+    height: 250px;
+    position: relative;
+    top: -3000px;
+    left: 60px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    
+}
+
+.tripad img{
+    width: 400px;
+    height: 350px;
+    position: relative;
+    top: -3290px;
+    left: 440px;
+    
+}
+.mmt img{
+    width: 300px;
+    height: 200px;
+    position: relative;
+    top: -3590px;
+    left: 890px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    
+}
+/*----footer----*/
+.footer
+{
+position: relative;
+width: 100%;
+text-align: center;
+padding: 30px;
+top: -3400px;
+}
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+#pagelength{
+    min-height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.icons{
+    padding: 18px;
+    margin:0 23px;
+    color: rgb(68, 27, 214);
+}
+
+/*------ABOUT US-----*/
+.sub-header{
+    height: 100vh;
+    width: 100%;
+    background-image:url('/static/images/BEACH2.JPG');
+    text-align: center;
+    
+
+}
+.aboutus h1{
+    color: rgb(223, 22, 75);
+    font-size: 80px;
+    padding: 40px;
+    position: relative;
+    top: -300px;
+    left: 440px;
+}
+
+.aboutus p{
+    width: 90%;
+    color: rgb(6, 6, 5);
+    position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    top: -340px;
+    left: 80px;
+    font-size: 25px;
+    
+    background: rgba(17, 159, 225, 0.518);
+    border-radius: 10px;
+    margin-bottom: 5% ;
+    padding: 20px 12px;
+    box-sizing: border-box;
+
+
+
+}
+.fa-5x{
+    size: 50px;
+    width: 90%;
+    padding: 5px;
+    position: relative;
+    top: -460px;
+    left: 550px;
+    align-items: center;
+}
+
+.con-header{
+    height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(220, 116, 24, 0.678),rgba(39, 142, 186, 0.696)) ,url('/static/images/keni.jpg');
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    
+
+}
